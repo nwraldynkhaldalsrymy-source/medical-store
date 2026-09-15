@@ -1,0 +1,172 @@
+/* ================= صفحة الحساب ================= */
+
+.login-page {
+    min-height: 650px;
+    background-color: #f4faff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px 20px;
+}
+
+
+/* ================= البطاقة ================= */
+
+.login-card {
+    width: 100%;
+    max-width: 500px;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .08);
+}
+
+
+.login-card h2 {
+    text-align: center;
+
+    color: #0877c9;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================= الأزرار العلوية ================= */
+
+.tabs {
+    display: flex;
+
+    margin-bottom: 25px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+.tab {
+    width: 50%;
+
+    padding: 12px;
+
+    border: none;
+
+    background-color: transparent;
+
+    color: #555;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+.tab.active {
+    color: #0877c9;
+
+    font-weight: bold;
+
+    border-bottom: 3px solid #0877c9;
+}
+
+
+/* ================= النموذج ================= */
+
+.account-form label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #444;
+
+    font-weight: bold;
+}
+
+
+.account-form input {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 17px;
+
+    border: 1px solid #d7e5ef;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    font-family: Arial;
+
+    text-align: right;
+
+    box-sizing: border-box;
+}
+
+
+.account-form input:focus {
+    border-color: #0877c9;
+}
+
+
+/* ================= زر الإرسال ================= */
+
+.submit-btn {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #0877c9;
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+}
+
+
+.submit-btn:hover {
+    background-color: #075da5;
+}
+
+
+/* ================= الرسائل ================= */
+
+.message {
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+}
+
+
+/* إخفاء النموذج */
+
+.hidden {
+    display: none;
+}
+
+
+/* ================= التجاوب ================= */
+
+@media (max-width: 600px) {
+
+    .login-page {
+        padding: 40px 15px;
+    }
+
+    .login-card {
+        padding: 25px 20px;
+    }
+
+}

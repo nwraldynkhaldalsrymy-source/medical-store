@@ -1,0 +1,551 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4faff;
+    color: #222;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    width: 100%;
+    height: 90px;
+
+    background-color: #1976d2;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 4%;
+
+    /* ترتيب العناصر */
+    direction: ltr;
+
+    color: white;
+}
+
+
+/* الشعار - أقصى اليسار */
+
+.logo {
+    flex-shrink: 6px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+
+/* محرك البحث - بجانب الشعار */
+
+.search {
+    margin-left: 65px;
+}
+
+.search input {
+    width: 220px;
+    height: 40px;
+
+    border: none;
+    border-radius: 25px;
+
+    padding: 0 18px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    direction: rtl;
+}
+
+
+/* اسم المتجر - في المنتصف */
+
+.brand {
+    margin-left: 115px;
+
+    text-align: center;
+
+    direction: rtl;
+
+    white-space: nowrap;
+}
+
+.brand h1 {
+    font-size: 34px;
+    margin-bottom: 4px;
+}
+
+.brand p {
+    font-size: 12px;
+}
+
+
+/* القائمة - بعد اسم المتجر */
+
+nav {
+    margin-left: 225px;
+
+    display: flex;
+
+    gap: 25px;
+
+    direction: rtl;
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    white-space: nowrap;
+}
+
+nav a:hover {
+    color: #dceeff;
+}
+
+/* ================= عنوان الصفحة ================= */
+
+.page-title {
+    background-color: #eaf6ff;
+
+    padding: 25px 8%;
+
+    text-align: right;
+}
+
+.page-title h2 {
+    color: #075da5;
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.page-title p {
+    color: #555;
+}
+
+.page-title span {
+    color: #0877c9;
+}
+
+
+/* ================= المحتوى ================= */
+
+main {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 45px 0;
+}
+
+
+/* قسم التواصل */
+
+.contact-section {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+
+    align-items: stretch;
+}
+
+
+/* ================= معلومات التواصل ================= */
+
+.contact-info {
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,.07);
+
+    text-align: right;
+}
+
+.contact-info h2 {
+    color: #0877c9;
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+.intro {
+    color: #555;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+}
+
+
+/* صندوق المعلومات */
+
+.info-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    background-color: #f4faff;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    margin-bottom: 15px;
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+
+    background-color: #0877c9;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+.info-box h3 {
+    color: #075da5;
+
+    margin-bottom: 5px;
+}
+
+.info-box p {
+    color: #555;
+}
+
+
+/* ================= التواصل الاجتماعي ================= */
+
+.social {
+    margin-top: 30px;
+}
+
+.social h3 {
+    color: #075da5;
+
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+
+    gap: 12px;
+}
+
+.social-icons a {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-4px);
+}
+
+
+/* ألوان الأيقونات */
+
+.facebook {
+    background-color: #1877f2;
+}
+
+.instagram {
+    background-color: #c13584;
+}
+
+.whatsapp {
+    background-color: #25d366;
+}
+
+.telegram {
+    background-color: #229ed9;
+}
+
+
+/* ================= النموذج ================= */
+
+.contact-form {
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,.07);
+}
+
+.contact-form h2 {
+    color: #0877c9;
+
+    font-size: 28px;
+
+    margin-bottom: 25px;
+}
+
+.contact-form label {
+    display: block;
+
+    color: #444;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    border: 1px solid #d7e5ef;
+
+    border-radius: 7px;
+
+    padding: 12px;
+
+    margin-bottom: 17px;
+
+    outline: none;
+
+    font-family: Arial;
+
+    text-align: right;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #0877c9;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #0877c9;
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #075da5;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background-color: #075f9d;
+
+    color: white;
+}
+
+.footer-box {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 35px 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 40px;
+}
+
+.footer-box h3 {
+    margin-bottom: 18px;
+
+    font-size: 19px;
+}
+
+.footer-box p {
+    line-height: 2;
+
+    font-size: 14px;
+}
+
+.footer-box a {
+    display: block;
+
+    color: white;
+
+    text-decoration: none;
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+}
+
+.footer-box a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,.3);
+
+    text-align: center;
+
+    padding: 15px;
+
+    font-size: 14px;
+}
+
+
+/* ================= الشاشات الصغيرة ================= */
+
+@media (max-width: 1200px) {
+
+
+    header {
+        height: auto;
+
+        padding: 20px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 20px;
+    }
+
+    .logo,
+    .search,
+    .brand,
+    nav {
+        margin: 0;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        padding: 25px;
+    }
+
+
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .footer-box {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ||التواصل ||*/
+
+.phone-link {
+    color: #075da5;
+    text-decoration: none;
+    font-size: 17px;
+    direction: ltr;
+    display: inline-block;
+}
+
+.phone-link:hover {
+    text-decoration: underline;
+}
+
+.email-link {
+    color: #075da5;
+    text-decoration: none;
+    font-size: 17px;
+    direction: ltr;
+    display: inline-block;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+.location-link {
+    color: #075da5;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.location-link:hover {
+    text-decoration: underline;
+}

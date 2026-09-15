@@ -1,0 +1,428 @@
+/* =========================
+   الإعدادات العامة
+========================= */
+
+* {
+    margin: 100;
+    padding: 33;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: rgb(90, 84, 84);
+}
+
+
+/* =========================
+   الترويسة
+========================= */
+
+header {
+    width: 100%;
+    height: 90px;
+
+    background-color: rgb(40, 121, 213);
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 4%;
+
+    /* ترتيب العناصر */
+    direction: ltr;
+
+    color: white;
+}
+
+
+/* الشعار - أقصى اليسار */
+
+.logo {
+    flex-shrink: 6px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+
+/* محرك البحث - بجانب الشعار */
+
+.search {
+    margin-left: 65px;
+}
+
+.search input {
+    width: 220px;
+    height: 40px;
+
+    border: none;
+    border-radius: 25px;
+
+    padding: 0 18px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    direction: rtl;
+}
+
+
+/* اسم المتجر - في المنتصف */
+
+.brand {
+    margin-left: 115px;
+
+    text-align: center;
+
+    direction: rtl;
+
+    white-space: nowrap;
+}
+
+.brand h1 {
+    font-size: 34px;
+    margin-bottom: 4px;
+}
+
+.brand p {
+    font-size: 12px;
+}
+
+
+/* القائمة - بعد اسم المتجر */
+
+nav {
+    margin-left: 225px;
+
+    display: flex;
+
+    gap: 25px;
+
+    direction: rtl;
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    padding: 10px 0;
+}
+
+nav a:hover,
+nav a.active {
+    border-bottom: 2px solid white;
+}
+
+
+/* =========================
+   القسم الرئيسي
+========================= */
+
+.hero {
+    width: 86%;
+    min-height: 440px;
+
+    margin: 38px auto;
+
+    padding: 45px;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 50px;
+
+    direction: ltr;
+}
+
+.hero-image {
+    width: 55%;
+}
+.hero-image:hover{
+    transform: scale(1.01);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 340px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+}
+
+
+.hero-text {
+    width: 45%;
+
+    text-align: right;
+
+    direction: rtl;
+}
+
+.hero-text h2 {
+    color: royalblue;
+
+    font-size: 38px;
+
+    line-height: 1.6;
+
+    margin-bottom: 18px;
+}
+
+.hero-text p {
+    font-size: 17px;
+
+    line-height: 2;
+
+    margin-bottom: 25px;
+}
+
+
+/* زر تسوق الآن */
+
+.btn {
+    display: inline-block;
+
+    background-color: royalblue;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 30px;
+
+    border-radius: 8px;
+}
+
+.btn:hover {
+    background-color: rgb(77, 133, 212);
+}
+
+
+/* =========================
+   المنتجات
+========================= */
+
+.products {
+    width: 86%;
+
+    margin: 55px auto;
+
+    text-align: center;
+
+    direction: rtl;
+}
+
+.products > h2 {
+    color: royalblue;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+.description {
+    color: rgb(70, 63, 63);
+
+    margin-bottom: 35px;
+}
+
+
+/* شبكة المنتجات */
+
+.product-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* بطاقة المنتج */
+
+.product-card {
+    background-color: white;
+
+    border-radius: 15px;
+
+    padding: 18px;
+
+    min-height: 280px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+.product-card:hover{
+    transform: scale(1.1);
+}
+
+.product-card img {
+    width: 100%;
+
+    height: 170px;
+
+    object-fit: contain;
+
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+
+    margin-bottom: 14px;
+}
+
+.product-card a {
+    color: rgb(73, 107, 208);
+
+    text-decoration: none;
+}
+
+.product-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   الفوتر
+========================= */
+
+
+footer {
+    background-color: rgb(79, 115, 193);
+    color: white;
+}
+
+.footer-box {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-box h3 {
+    margin-bottom: 18px;
+    font-size: 19px;
+}
+
+.footer-box p {
+    line-height: 2;
+    font-size: 14px;
+}
+
+.footer-box a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-box a:hover {
+    text-decoration: underline;
+}
+
+
+/* حقوق النشر */
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   الشاشات الصغيرة
+========================= */
+
+@media (max-width: 900px) {
+
+    header {
+        height: auto;
+
+        padding: 20px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 20px;
+    }
+
+    .logo,
+    .search,
+    .brand,
+    nav {
+        margin: 0;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        padding: 25px;
+    }
+
+    .hero-image,
+    .hero-text {
+        width: 100%;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   الجوال
+========================= */
+
+@media (max-width: 600px) {
+
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text h2 {
+        font-size: 28px;
+    }
+
+    .hero-image img {
+        height: 250px;
+    }
+}

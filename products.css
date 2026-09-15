@@ -1,0 +1,285 @@
+/* =========================
+   صفحة المنتجات
+========================= */
+
+.products-page {
+    width: 100%;
+    padding: 45px 7%;
+}
+
+
+/* عنوان الصفحة */
+
+.products-page .products {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+.products-page .products h2 {
+    color: #0878c9;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.products-page .description {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   أدوات البحث والتصنيف
+========================= */
+
+.product-tools {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    margin-bottom: 35px;
+}
+
+.product-tools input,
+.product-tools select {
+    width: 220px;
+    height: 42px;
+
+    border: 1px solid #d5e5ef;
+    border-radius: 8px;
+
+    padding: 0 15px;
+
+    background-color: white;
+
+    outline: none;
+
+    font-size: 14px;
+
+    direction: rtl;
+}
+
+.product-tools input:focus,
+.product-tools select:focus {
+    border-color: #0878c9;
+}
+
+
+/* =========================
+   شبكة المنتجات
+========================= */
+
+.products-page .product-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================
+   بطاقة المنتج
+========================= */
+
+.products-page .product-card {
+    background-color: white;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    min-height: 360px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+
+    transition: 0.2s;
+}
+
+.products-page .product-card:hover {
+    transform: translateY(-3px);
+}
+
+
+/* صورة المنتج */
+
+.products-page .product-card img {
+    width: 100%;
+    height: 170px;
+
+    object-fit: contain;
+
+    margin-bottom: 12px;
+}
+
+
+/* اسم المنتج */
+
+.products-page .product-card h3 {
+    font-size: 18px;
+
+    color: #333;
+
+    margin-bottom: 10px;
+}
+
+
+/* وصف المنتج */
+
+.products-page .product-card p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    min-height: 48px;
+
+    margin-bottom: 12px;
+}
+
+
+/* السعر */
+
+.products-page .product-card strong {
+    display: block;
+
+    color: #0878c9;
+
+    font-size: 18px;
+
+    margin-bottom: 15px;
+}
+
+
+/* زر التفاصيل */
+
+.products-page .product-card a {
+    display: inline-block;
+
+    background-color: #0878c9;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 9px 22px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+}
+
+.products-page .product-card a:hover {
+    background-color: #075b99;
+}
+
+
+/* =========================
+   الشاشات الصغيرة
+========================= */
+
+@media (max-width: 900px) {
+
+    .products-page .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-tools {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .products-page {
+        padding: 30px 5%;
+    }
+
+    .products-page .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .product-tools {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-tools input,
+    .product-tools select {
+        width: 100%;
+    }
+}
+
+/* نافذة تفاصيل المنتج */
+
+.description-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+    padding: 20px;
+}
+
+.description-modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+
+    padding: 25px;
+    border-radius: 20px;
+
+    text-align: center;
+
+    position: relative;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.modal-image {
+    width: 220px;
+    height: 220px;
+
+    object-fit: contain;
+
+    display: block;
+    margin: 10px auto 20px;
+}
+
+.modal-title {
+    color: #075da5;
+    margin-bottom: 12px;
+}
+
+.modal-description {
+    color: #555;
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+.modal-close {
+    position: absolute;
+
+    top: 8px;
+    left: 15px;
+
+    border: none;
+    background: none;
+
+    font-size: 32px;
+    color: #075da5;
+
+    cursor: pointer;
+}

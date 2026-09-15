@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4faff;
+    color: #222;
+}
+
+
+
+/* =========================
+   الترويسة
+========================= */
+
+header {
+    width: 100%;
+    height: 90px;
+
+    background-color: #1976d2;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 4%;
+
+    /* ترتيب العناصر */
+    direction: ltr;
+
+    color: white;
+}
+
+
+/* الشعار - أقصى اليسار */
+
+.logo {
+    flex-shrink: 6px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+
+/* محرك البحث - بجانب الشعار */
+
+.search {
+    margin-left: 65px;
+}
+
+.search input {
+    width: 220px;
+    height: 40px;
+
+    border: none;
+    border-radius: 25px;
+
+    padding: 0 18px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    direction: rtl;
+}
+
+
+/* اسم المتجر - في المنتصف */
+
+.brand {
+    margin-left: 115px;
+
+    text-align: center;
+
+    direction: rtl;
+
+    white-space: nowrap;
+}
+
+.brand h1 {
+    font-size: 34px;
+    margin-bottom: 4px;
+}
+
+.brand p {
+    font-size: 12px;
+}
+
+
+/* القائمة - بعد اسم المتجر */
+
+nav {
+    margin-left: 225px;
+
+    display: flex;
+
+    gap: 25px;
+
+    direction: rtl;
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    white-space: nowrap;
+}
+
+nav a:hover {
+    color: #dceeff;
+}
+
+
+/* ================= عنوان الصفحة ================= */
+
+.page-title {
+    background-color: #eaf6ff;
+    padding: 25px 8%;
+    text-align: right;
+}
+
+.page-title h2 {
+    color: #075da5;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.page-title p {
+    color: #555;
+}
+
+
+/* ================= المحتوى ================= */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 0 50px;
+}
+
+
+/* العنوان */
+
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro h2 {
+    color: #0877c9;
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    color: #555;
+}
+
+
+/* ================= البطاقات ================= */
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    padding-bottom: 20px;
+    transition: 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* صور التصنيفات */
+
+.category-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+
+/* اسم التصنيف */
+
+.category-card h3 {
+    color: #075da5;
+    font-size: 18px;
+    margin: 15px 5px 8px;
+}
+
+
+/* عدد المنتجات */
+
+.category-card p {
+    color: #555;
+    margin-bottom: 12px;
+}
+
+
+/* زر عرض المنتجات */
+
+.category-card a {
+    display: inline-block;
+    background-color: #0877c9;
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.category-card a:hover {
+    background-color: #075a9c;
+}
+
+
+/* ================= Footer ================= */
+
+footer {
+    background-color: #075f9d;
+    color: white;
+}
+
+.footer-box {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-box h3 {
+    margin-bottom: 18px;
+    font-size: 19px;
+}
+
+.footer-box p {
+    line-height: 2;
+    font-size: 14px;
+}
+
+.footer-box a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-box a:hover {
+    text-decoration: underline;
+}
+
+
+/* حقوق النشر */
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+
+/* ================= الشاشات الصغيرة ================= */
+
+@media (max-width: 1200px) {
+
+    header {
+        height: auto;
+
+        padding: 20px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 20px;
+    }
+
+    .logo,
+    .search,
+    .brand,
+    nav {
+        margin: 0;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        padding: 25px;
+    }
+
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .categories {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .search input {
+        width: 100%;
+    }
+}
+
+
